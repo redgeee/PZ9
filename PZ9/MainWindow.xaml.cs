@@ -23,6 +23,7 @@ namespace PZ9
     {
         public ColorRGB mcolor { get; set; }
         public Color clr { get; set; }
+        private int TextSize = 10;
         public MainWindow()
         {
             InitializeComponent();
@@ -114,6 +115,18 @@ namespace PZ9
             this.lbl1.Background = btn.Background;
             
             this.inkCanvas1.DefaultDrawingAttributes.Color = ((System.Windows.Media.SolidColorBrush)(btn.Background)).Color;
+        }
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            this.inkCanvas1.DefaultDrawingAttributes.Height = Convert.ToDouble(pressed.Content);
+            this.inkCanvas1.DefaultDrawingAttributes.Width = Convert.ToDouble(pressed.Content);
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show(cmb.SelectedItem.ToString());
+            
         }
     }
 }
