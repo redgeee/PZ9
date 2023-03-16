@@ -94,5 +94,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-close-cross-64498.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-highlight-9038055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-add-text-7911855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-clear-format-8233927.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-diskette-747439.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -106,6 +106,15 @@ namespace PZ9
             this.inkCanvas1.Children.Add(tb);
             tb.Focus();
         }
+
+        private void set_color_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            this.lbl1.Background = btn.Background;
+            
+            this.inkCanvas1.DefaultDrawingAttributes.Color = ((System.Windows.Media.SolidColorBrush)(btn.Background)).Color;
+        }
     }
 }
 

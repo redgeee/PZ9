@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PZ9"
         mc:Ignorable="d"
         Title="Графический редактор" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="mainWindow">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF5AA9E6" Offset="0.786"/>
@@ -14,18 +14,48 @@
             </LinearGradientBrush>
         </Grid.Background>
         <InkCanvas x:Name="inkCanvas1" HorizontalAlignment="Left" Height="304" Margin="10,10,0,0" VerticalAlignment="Top" Width="640"/>
-        <Button Content="Очистить" HorizontalAlignment="Left" Margin="689,27,0,0" VerticalAlignment="Top" Height="37" Width="75" Click="Button_Click"/>
-        <Button Content="Закрыть" HorizontalAlignment="Left" Margin="689,82,0,0" VerticalAlignment="Top" Width="75" Height="37" Click="Button_Click_1"/>
-        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="689,139,0,0" VerticalAlignment="Top" Width="75" Height="37" Click="Button_Click_2"/>
+        <Button HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click">
+            <Image Height="30" Source="/free-icon-clear-format-8233927.png" Stretch="Fill" Width="30"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="669,61,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_1">
+            <Image Height="27" Source="/free-icon-close-cross-64498.png" Stretch="Fill" Width="28"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="669,112,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_2">
+            <Image Height="27" Source="/free-icon-diskette-747439.png" Stretch="Fill" Width="30"/>
+        </Button>
 
         <Slider x:Name="sld_RedColor" Background="Red" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="25,322,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
         <Slider x:Name="sld_GreenColor" Background="Green" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="25,342,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
         <Slider x:Name="sld_BlueColor" Background="Blue" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="25,362,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
 
-        <Label x:Name="lbl1" Content="Выбранный цвет" HorizontalAlignment="Left" Margin="359,333,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl1" Content="Выбранный цвет" HorizontalAlignment="Left" Margin="369,384,0,0" VerticalAlignment="Top"/>
 
-        <Button x:Name="btn_Select" Content="Выделить" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Center" Width="75" Click="btn_Select_Click" Height="37"/>
+        <Button x:Name="btn_Select" HorizontalAlignment="Left" Margin="669,162,0,0" VerticalAlignment="Top" Width="40" Click="btn_Select_Click" Height="40">
+            <Image Height="27" Source="/free-icon-highlight-9038055.png" Stretch="Fill" Width="30"/>
+        </Button>
 
-        <Button x:Name="btn_AddText" Content="Добавить текст" HorizontalAlignment="Left" Margin="675,257,0,0" VerticalAlignment="Top" Width="102" Click="btn_AddText_Click" Height="37"/>
+        <Button x:Name="btn_AddText" HorizontalAlignment="Left" Margin="669,217,0,0" VerticalAlignment="Top" Width="40" Click="btn_AddText_Click" Height="40">
+            <Image Height="20" Source="/free-icon-add-text-7911855.png" Stretch="Fill" Width="30"/>
+        </Button>
+        <Grid x:Name="colorWindow" Margin="328,325,288,63">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Background="Red" Click="set_color_Button_Click"/>
+            <Button Grid.Row="0" Grid.Column="1" Background="Purple" Click="set_color_Button_Click"/>
+            <Button Grid.Row="0" Grid.Column="2" Background="LightGreen" Click="set_color_Button_Click"/>
+            <Button Grid.Row="0" Grid.Column="3" Background="LightCoral" Click="set_color_Button_Click"/>
+            <Button Grid.Row="0" Grid.Column="4" Background="OrangeRed" Click="set_color_Button_Click"/>
+            <Button Grid.Row="0" Grid.Column="5" Background="Beige" Click="set_color_Button_Click"/>
+        </Grid>
+
     </Grid>
 </Window>
